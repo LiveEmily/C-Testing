@@ -1,19 +1,38 @@
-#include <stdio.h> 
-#include <stdlib.h>
+#include <stdio.h>
+
+int add(int a, int b, int sum);
  
 int main() { 
  
            /* I am C developer */ 
 
-           int a = 0, b = 1, c = 2, d = 3, e = 4;
+           char operation[50];
 
-           a = b - c + d * e;
+           int a, b, sum;
  
-           printf("Hello, world! \n"); 
+           printf("What operation would you like to do? \n"); 
 
-           printf("%d", a);
+           gets(operation);
+
+           printf("Please give me the first number to %s together.\n", operation); 
+
+           scanf("%d", &a);
+
+           printf("Please give me the second number to %s together.\n", operation); 
+
+           scanf("%d", &b);
+
+           if(strcmp(operation, "add")==0)
+           {
+               printf("Your addition concluded in the number %d\n", add(a, b, sum));
+           };
 
            system("pause"); 
                
            return 0; 
+}
+
+int add(int a, int b, int sum)
+{
+    return sum = a + b;
 }
