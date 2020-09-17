@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int add(int a, int b, int sum);
+
+int i = 0;
  
 int main() { 
  
@@ -9,77 +12,101 @@ int main() {
            char operator;
 
            int a, b, sum;
- 
-           printf("What operation would you like to do? \n"); 
 
-           scanf("%c", &operator);
+           char yON;
 
-           switch(operator)
+           while(i<10)
            {
-                case '+':
-                    printf("Please give me the first number to add together.\n"); 
+               printf("What operation would you like to do? \n"); 
 
-                    scanf("%d", &a);
+               scanf("%c", &operator);
 
-                    printf("Please give me the second number to add together.\n"); 
+               switch(operator)
+               {
+                    case '+':
+                        printf("Please give me the first number to add together.\n"); 
 
-                    scanf("%d", &b);
+                        scanf("%d", &a);
 
-                    printf("Your addition concluded in the number %d\n", add(a, b, sum));
+                        printf("Please give me the second number to add together.\n"); 
+
+                        scanf("%d", &b);
+
+                        printf("Your addition concluded in the number %d\n", add(a, b, sum));
+
+                    break;
+
+                    case '-':
+                        printf("Please give me the first number to divide together.\n"); 
+
+                        scanf("%d", &a);
+
+                        printf("Please give me the second number to divide together.\n"); 
+
+                        scanf("%d", &b);
+
+                        printf("Your substraction concluded in the number %d\n", substract(a, b, sum));
 
                     break;
 
-                case '-':
-                    printf("Please give me the first number to divide together.\n"); 
+                    case '*':
+                        printf("Please give me the first number to multiply together.\n"); 
 
-                    scanf("%d", &a);
+                        scanf("%d", &a);
 
-                    printf("Please give me the second number to divide together.\n"); 
+                        printf("Please give me the second number to multiply together.\n"); 
 
-                    scanf("%d", &b);
+                        scanf("%d", &b);
 
-                    printf("Your substraction concluded in the number %d\n", substract(a, b, sum));
-
-                    break;
-                case '*':
-                    printf("Please give me the first number to multiply together.\n"); 
-
-                    scanf("%d", &a);
-
-                    printf("Please give me the second number to multiply together.\n"); 
-
-                    scanf("%d", &b);
-
-                    printf("Your multiplication concluded in the number %d\n", multiply(a, b, sum));
+                        printf("Your multiplication concluded in the number %d\n", multiply(a, b, sum));
 
                     break;
-                case '/':
-                    printf("Please give me the first number to divide.\n"); 
 
-                    scanf("%d", &a);
+                    case '/':
+                        printf("Please give me the first number to divide.\n"); 
 
-                    printf("Please give me the second number to divide.\n"); 
+                        scanf("%d", &a);
 
-                    scanf("%d", &b);
+                        printf("Please give me the second number to divide.\n"); 
 
-                    printf("Your division concluded in the number %d\n", divide(a, b, sum));
+                        scanf("%d", &b);
 
-                    break;
-                case '%':
-                    printf("Please give me the first number to divide.\n"); 
-
-                    scanf("%d", &a);
-
-                    printf("Please give me the second number to divide.\n"); 
-
-                    scanf("%d", &b);
-
-                    printf("Your division concluded in the number %d as the remainder\n", remain(a, b, sum));
+                        printf("Your division concluded in the number %d\n", divide(a, b, sum));
 
                     break;
+
+                    case '%':
+                        printf("Please give me the first number to divide.\n"); 
+
+                        scanf("%d", &a);
+
+                        printf("Please give me the second number to divide.\n"); 
+
+                        scanf("%d", &b);
+
+                        printf("Your division concluded in the number %d as the remainder\n", remain(a, b, sum));
+
+                    break;
+                }
+
+                system("cls");
+
+                printf("Would you like to do another math operation? y = yes, n = no");
+
+                yON = getchar();
+
+                if(yON == 'y')
+                {
+                    break;
+                }
+                else
+                {
+                    exit(0);
+                }
+                
+
+                system("cls");
            }
-
-           system("pause"); 
                
            return 0; 
 }
