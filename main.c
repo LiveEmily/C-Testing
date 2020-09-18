@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-
-int add(int a, int b, int sum);
  
 int main() { 
  
@@ -96,7 +94,7 @@ int main() {
 
                 printf("Would you like to do another math operation? y = yes, n = no\n");
 
-                scanf_s("%c", &yOn, 1);
+                scanf_s(" %c", &yOn, 1);
 
                 if(yOn == 'y')
                 {
