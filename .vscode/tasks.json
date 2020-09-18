@@ -1,15 +1,15 @@
 {
     "tasks": [
-        {
+        { 
             "type": "shell",
             "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\Win-builds\\bin\\gcc.exe",
+            "command": "C:\\Win-builds-64\\bin\\gcc.exe",
             "args": [
                 "-g",
                 "${file}",
+                "memory.ico",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-std=c99"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
