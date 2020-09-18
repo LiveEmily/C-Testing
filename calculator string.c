@@ -14,21 +14,23 @@ int main() {
 
            char yOn;
 
+           char string = malloc(12);
+
            while(breakCode)
            {
                printf("What operation would you like to do? \n"); 
 
-               scanf_s(" %s", &operator, 100);
+               scanf_s(" %s", &operator, 10);
 
                if(strcmp(operator, "add") == 0)
                {
                     printf("Please give me the first number to add together.\n"); 
 
-                    scanf_s(" %d", &a, 1);
+                    scanf_s(" %d", &a, 2147483647);
 
                     printf("Please give me the second number to add together.\n"); 
 
-                    scanf_s(" %d", &b, 17);
+                    scanf_s(" %d", &b, 2147483647);
 
                     printf("Your addition concluded in the number %d\n", add(a, b, sum));
                }
@@ -36,11 +38,11 @@ int main() {
                {
                     printf("Please give me the first number to divide together.\n"); 
 
-                    scanf_s(" %d", &a, 1);
+                    scanf_s(" %d", &a, 2147483647);
 
                     printf("Please give me the second number to divide together.\n"); 
 
-                    scanf_s(" %d", &b, 1);
+                    scanf_s(" %d", &b, 2147483647);
 
                     printf("Your substraction concluded in the number %d\n", substract(a, b, sum));
                }
@@ -48,11 +50,11 @@ int main() {
                {
                     printf("Please give me the first number to multiply together.\n"); 
 
-                    scanf_s(" %d", &a, 1);
+                    scanf_s(" %d", &a, 2147483647);
 
                     printf("Please give me the second number to multiply together.\n"); 
 
-                    scanf_s(" %d", &b, 1);
+                    scanf_s(" %d", &b, 2147483647);
 
                     printf("Your multiplication concluded in the number %d\n", multiply(a, b, sum));
                }
@@ -60,11 +62,11 @@ int main() {
                {
                     printf("Please give me the first number to divide.\n"); 
 
-                    scanf_s(" %d", &a, 1);
+                    scanf_s(" %d", &a, 2147483647);
 
                     printf("Please give me the second number to divide.\n"); 
 
-                    scanf_s(" %d", &b, 1);
+                    scanf_s(" %d", &b, 2147483647);
 
                     printf("Your division concluded in the number %d\n", divide(a, b, sum));
                }
@@ -72,11 +74,11 @@ int main() {
                {
                     printf("Please give me the first number to divide.\n"); 
 
-                    scanf_s(" %d", &a, 1);
+                    scanf_s(" %d", &a, 2147483647);
 
                     printf("Please give me the second number to divide.\n"); 
 
-                    scanf_s(" %d", &b, 1);
+                    scanf_s(" %d", &b, 2147483647);
 
                     printf("Your division concluded in the number %d as the remainder\n", remain(a, b, sum));
                }
